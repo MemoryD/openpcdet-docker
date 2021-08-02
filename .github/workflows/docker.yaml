@@ -18,9 +18,11 @@ jobs:
         with:
           username: memoryd
           password: ${{ secrets.DOCKER_PASSWORD }}
-          logout: false
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
           push: true
+          name: memoryd/openpcdet-docker
           tags: openpcdet-docker:${{ env.RELEASE_VERSION }}
+          username: memoryd
+          password: ${{ secrets.DOCKER_PASSWORD }}
