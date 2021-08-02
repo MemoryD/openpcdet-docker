@@ -1,0 +1,6 @@
+[submodule "OpenPCDet"]
+	path = OpenPCDet
+	url = https://github.com/open-mmlab/OpenPCDet
+[submodule "spconv"]
+	path = spconv
+	url = https://github.com/traveller59/spconv
