@@ -22,4 +22,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: memoryd/openpcdet-docker:${{ env.RELEASE_VERSION }}D }}
+          tags: memoryd/openpcdet-docker:${{ env.RELEASE_VERSION }}
