@@ -27,7 +27,8 @@ RUN ln -s /usr/bin/llvm-config-10 /usr/bin/llvm-config
 ARG TORCH_CUDA_ARCH_LIST="5.2 6.0 6.1 7.0 7.5+PTX"
 
 # Install OpenPCDet
-COPY OpenPCDet /tmp/OpenPCDet
-WORKDIR /tmp/OpenPCDet
+RUN mkdir -p /mnt/csip-101/Memory
+COPY OpenPCDet /mnt/csip-101/Memory/OpenPCDet
+WORKDIR /mnt/csip-101/Memory/OpenPCDet
 RUN pip install -r requirements.txt
 RUN python setup.py develop
